@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hero section</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="animationcss.css" rel="stylesheet" type="text/css" />
+    <link href="
+https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+rel="stylesheet"/>
+  </head>
+  <body>
+ <!--Red corousel Section Start-->
+ <div class="redCarouselanimation">
+    <div class="animation">
+      <div class="animation-section">
+        <div class="animation-section1">
+          <div class="animation80">
+            <p class="animation-text80">
+              80
+            </p>
+          </div>
+        <div class="animation-section1-rightSec">
+          <p class="animation-section1-paragraphTxt animation-section1-paragraphTxtMob">
+            of people who care for those with dementia report some level of financial mismanagement by the individual.<sup class="num">1</sup>
+          </p>
+          <div class="animation-section1-rightTopSec">
+            <svg class="animation-graph" viewBox="0 0 650 104">
+              <polyLine points="0,80 20,80 60,60 80,80 120,40 160,20 220,60 255,40 315,80 370,40 410,0 450,20 510,40 550,20 590,40 625,20"
+                id="myLine" class="myLine"
+                fill="none"
+                stroke-width="2"
+                stroke="#FFF"/>
+                <polyline class="straightLine" points="0,20 625,20" stroke-width="0.2" fill="none" stroke="#FFF"/>
+                <polyline class="straightLine" points="0,40 625,40" stroke-width="0.2" fill="none" stroke="#FFF"/>
+                <polyline class="straightLine" points="0,60 625,60" stroke-width="0.2" fill="none" stroke="#FFF"/>
+                <polyline class="straightLine" points="0,80 625,80" stroke-width="0.2" fill="none" stroke="#FFF"/>
+                <polyline class="straightLine" points="0,100 625,100" stroke-width="0.2" fill="none" stroke="#FFF"/>
+                <circle cx="3" cy="20" r="3" fill="#FFF"/>
+                <circle cx="3" cy="40" r="3" fill="#FFF"/>
+                <circle cx="3" cy="60" r="3" fill="#FFF"/>
+                <circle cx="3" cy="80" r="3" fill="#FFF"/>
+                <circle cx="3" cy="99" r="3" fill="#FFF"/>
+    
+    
+                <circle class="dot" cx="20" cy="80" r="3" fill="#FFF"/>
+                <circle class="dot" cx="60" cy="60" r="3" fill="#FFF"/>
+                <circle class="dot" cx="80" cy="80" r="3" fill="#FFF"/>
+                <circle class="dot" cx="120" cy="40" r="3" fill="#FFF"/>
+                <circle class="dot" cx="160" cy="20" r="3" fill="#FFF"/>
+                <circle class="dot" cx="220" cy="60" r="3" fill="#FFF"/>
+                <circle class="dot" cx="255" cy="40" r="3" fill="#FFF"/>
+                <circle class="dot" cx="315" cy="80" r="3" fill="#FFF"/>
+                <circle class="dot" cx="370" cy="40" r="3" fill="#FFF"/>
+                <circle class="dot" cx="410" cy="3" r="3" fill="#FFF"/>
+                <circle class="dot" cx="450" cy="20" r="3" fill="#FFF"/>
+                <circle class="dot" cx="510" cy="40" r="3" fill="#FFF"/>
+                <circle class="dot" cx="550" cy="20" r="3" fill="#FFF"/>
+                <circle class="dot" cx="590" cy="40" r="3" fill="#FFF"/>
+                <circle class="dot" cx="625" cy="20" r="3" fill="#FFF"/>
+                <defs>
+                  <polyLine
+                  id="myLine2"
+                  points="0,100 40,80 100,100 110,100 140,60 180,60 220,20 255,60 295,40 350,100 410,80 450,0 490,80 585,20"
+                  fill="none"
+                  stroke-width="2"
+                  stroke="#FFF"/>
+                  
+                 </defs>
+                 <mask id="first-mask"><use id="mask" class="mask" xlink:href="#myLine2" /></mask>
+                 <g class="paths">
+                   <use xlink:href="#myLine2" mask="url(#first-mask)" />
+                   <circle cx="40" cy="80" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="100" cy="100" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="110" cy="100" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="140" cy="60" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="180" cy="60" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="220" cy="20" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="255" cy="60" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="295" cy="40" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="350" cy="100" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="410" cy="80" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="450" cy="3" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="490" cy="80" r="3" fill="#FFF"/>
+                <circle class="dot1" cx="585" cy="20" r="3" fill="#FFF"/>
+                 </g>
+                 </svg>  
+          
+          </div>
+          <p class="animation-section1-paragraphTxt animation-section1-paragraphTxtDes">
+            of people who care for those with dementia report some level of financial mismanagement by the individual.<sup class="num">1</sup>
+          </p>
+        </div>
+        </div>
+      </div>
+    
+    </div>
+    </div>
+    <!--Red corousel Section End-->
+
+<script>
+    let counters = document.getElementsByClassName('animation-text80');
+
+let vals = Array.from(counters).map(x => Number(x.innerHTML));
+counters = Array.from(counters);
+
+counters.forEach(el => {
+  //set counter to 0
+  el.innerHTML = '0';
+  el.counter = 0;
+});
+
+let update = () => {
+  counters.forEach((el, i) => {
+    el.counter += 1;
+    el.innerHTML = Math.min(vals[i], el.counter);
+  });
+  requestAnimationFrame(update);
+}
+update();
+$('.animation80').each(function () {
+
+duration = 90000; //in ms
+step = 0.5; //increase in width in px
+
+var bar = $(this),
+    percent = bar.find('.animation-text80'),
+    barWidth = Number(bar.data('width')),
+    i = 1,
+    interval;
+
+
+percent.text(i + '%');
+i++;
+});
+
+</script>
+
+<script>
+    const dots = document.querySelectorAll('.dot');
+    const lineLength = 800;
+    const dotPositions = [20, 60, 80, 120, 160, 220, 255, 315, 370, 410, 450, 510, 550, 590, 625];
+
+    const dots2 = document.querySelectorAll('.dot1');
+    const dotPositions1 = [40, 100, 100, 140, 180, 220, 255, 295, 350, 410, 450, 490, 585];
+    function showDots() {
+        const totalDuration = 13000;
+
+        dotPositions.forEach((pos, index) => {
+            setTimeout(() => {
+                dots[index].classList.add('dot-visible');
+            }, (pos / lineLength) * totalDuration);
+        });
+    }
+    function showDotsLine() {
+        const totalDuration = 13000;
+
+        dotPositions1.forEach((pos, index) => {
+            setTimeout(() => {
+                dots2[index].classList.add('dot-visible');
+            }, (pos / lineLength) * totalDuration);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        showDotsLine();
+        showDots();
+    });
+</script>
+  </body>
+</html>
