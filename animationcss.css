@@ -100,6 +100,49 @@ body {
     text-align: center;
   }
 
+    /*Background Bubble annimation Start*/
+    .bubbleSec{
+      height: 400px;
+      background: #121212;
+      position: absolute;
+      width: 100%;
+      overflow: hidden;
+    }
+    .bubbles{
+      position: relative;
+      display: flex;
+    }
+  
+    .bubbles span{
+      min-width: 10px;
+      min-height: 10px;
+      box-shadow: 0 0 0 5px #4fc3dc44,
+      0 0 10px #4fc3dc,
+      0 0 20px #4fc3dc;
+      margin: 0 15px;   
+      position: relative;
+      background: #4fc3dc;
+      border-radius: 50%;
+      animation: animate 15s linear infinite;
+      animation-duration: calc(75s / var(--i));
+    }
+    .bubbles span:nth-child(even){
+      background: #EC1300;
+      box-shadow: 0 0 0 5px #AB1215,
+      0 0 10px #4fc3dc,
+      0 0 20px #4fc3dc;
+    }
+    @keyframes animate {
+      0%{
+        transform: translateY(400px) scale(0);
+      }
+      100%{
+        transform: translateY(-10px) scale(1);
+      }
+  
+    }
+    /*Background Bubble annimation End*/
+
 }
 
 
@@ -150,7 +193,55 @@ body {
         font-size: calc(43px + (80 - 43) * ((100vw - 768px) / (1400 - 768)));
       }
 
+  /*Background Bubble annimation Start*/
+  .bubbleSec{
+    background: #121212;
+    width: 100%;
+    height: 45.139vw;
+    overflow: hidden;
+  }
+  .bubbles{
+    position: relative;
+    display: flex;
+  }
+  .bubbles span{
+    position: relative;
+    min-width: 2.083vw;
+    min-height: 2.083vw;
+    background: #4fc3dc;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.694vw #4fc3dc44,
+    0 0 3.472vw #4fc3dc,
+    0 0 6.944vw #4fc3dc;
+    margin: 0 1.042vw;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(75s / var(--i));
+  }
+  .bubbleSecTxt{
+    font-size: calc(22px + (40 - 22) * ((100vw - 768px) / (1400 - 768)));
+    line-height: 3.333vw;
+    color: #FFF;
+    position: absolute;
+    left: 48%;
+    padding-top: 12.5vw;
+    z-index: 1;
+  }
+  .bubbles span:nth-child(even){
+    background: #EC1300;
+    box-shadow: 0 0 0 0.694vw #AB1215,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+  }
+  @keyframes animate {
+    0%{
+      transform: translateY(45.139vw) scale(0);
+    }
+    100%{
+      transform: translateY(-0.694vw) scale(1);
+    }
 
+  }
+  /*Background Bubble annimation End*/
 }
 
 
@@ -192,31 +283,18 @@ body {
 
   /*Background Bubble annimation Start*/
   .bubbleSec{
-    background: #121212;
-    position: absolute;
-    width: 100%;
     height: 650px;
-    overflow: hidden;
   }
-  .bubbles{
-    position: relative;
-    display: flex;
-  }
+
   .bubbles span{
-    position: relative;
     min-width: 30px;
     min-height: 30px;
-    background: #4fc3dc;
-    border-radius: 50%;
     box-shadow: 0 0 0 10px #4fc3dc44,
     0 0 50px #4fc3dc,
     0 0 100px #4fc3dc;
     margin: 0 15px;
-    animation: animate 15s linear infinite;
-    animation-duration: calc(75s / var(--i));
   }
   .bubbles span:nth-child(even){
-    background: #EC1300;
     box-shadow: 0 0 0 10px #AB1215,
     0 0 50px #4fc3dc,
     0 0 100px #4fc3dc;
@@ -230,7 +308,39 @@ body {
     }
 
   }
+  .bubbleSecTxt{
+    font-size: 40px;
+    line-height: 48px;
+    padding-top: 180px;
+  }
   /*Background Bubble annimation End*/
+
+  /*Login Section Start*/
+  .loginBoxSec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    background: #F4F4F4;
+  }
+  .loginBox{
+    width: 400px;
+    height: 450px;
+    background: #EC1300;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginHeading{
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFF;
+    text-align: center;
+  }
+  .inputBox{
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid #FFF;
+  }
 }
-
-
