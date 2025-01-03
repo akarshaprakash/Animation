@@ -343,4 +343,78 @@ body {
     margin: 30px 0;
     border-bottom: 2px solid #FFF;
   }
+
+
+  .rotationAnimation{
+    margin: 0;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #121212;
+    overflow: hidden;
+  }
+  .earthRotation{
+    font-size: 10px;
+    width: 500px;
+    height: 500px;
+    position: relative;
+  }
+  .sun{
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #FFF;
+  }
+  .earth, .moon {
+    position: absolute;
+    border-style: solid;
+    border-color: #FFF transparent transparent transparent;
+    border-width: 1px 1px 0 0;
+    border-radius: 50%;
+  }
+.earth{
+  top: 50px;
+  left: 50px;
+  width: 400px;
+  height: 400px;
+  animation: orbit 36.5s linear infinite;
+}
+.moon{
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 140px;
+  animation: orbit 2.7s linear infinite;
+}
+.earth::before, .moon::before{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.earth::before{
+  top: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  background-color: aqua;
+}
+.moon::before{
+  top: 10px;
+  right: 5px;
+  width: 25px;
+  height: 25px;
+  background-color: silver;
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 }
