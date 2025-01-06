@@ -362,10 +362,10 @@ body {
   }
   .sun{
     position: absolute;
-    top: 150px;
-    left: 150px;
-    width: 200px;
-    height: 200px;
+    top: 175px;
+    left: 175px;
+    width: 150px;
+    height: 150px;
     background-color: orange;
     border-radius: 50%;
     box-shadow: 0 0 30px #FFF;
@@ -378,10 +378,10 @@ body {
     border-radius: 50%;
   }
 .earth{
-  top: 50px;
-  left: 50px;
-  width: 400px;
-  height: 400px;
+  top: 20px;
+  left: 20px;
+  width: 450px;
+  height: 450px;
   animation: orbit 36.5s linear infinite;
 }
 .moon{
