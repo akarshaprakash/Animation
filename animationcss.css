@@ -242,6 +242,81 @@ body {
 
   }
   /*Background Bubble annimation End*/
+
+
+  /*Earth rotation Start*/
+  .rotationAnimation{
+    margin: 0;
+    height: 41.667vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #121212;
+    overflow: hidden;
+  }
+  .earthRotation{
+    font-size: calc(6px + (10 - 6) * ((100vw - 768px) / (1400 - 768)));
+    width: 34.722vw;
+    height: 34.722vw;
+    position: relative;
+  } 
+  .sun{
+    position: absolute;
+    top: 12.153vw;
+    left: 12.153vw;
+    width: 10.417vw;
+    height: 10.417vw;
+    background-color: orange;
+    border-radius: 50%;
+    box-shadow: 0 0 2.083vw #FFF;
+  }
+  .earth, .moon {
+    position: absolute;
+    border-style: solid;
+    border-color: #FFF transparent transparent transparent;
+    border-width: 0.069vw 0.069vw 0 0;
+    border-radius: 50%;
+  }
+.earth{
+  top: 1.389vw;
+  left: 1.389vw;
+  width: 31.25vw;
+  height: 31.25vw;
+  animation: orbit 36.5s linear infinite;
+}
+.moon{
+  top: 0;
+  right: 0;
+  width: 9.722vw;
+  height: 9.722vw;
+  animation: orbit 2.7s linear infinite;
+}
+.earth::before, .moon::before{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.earth::before{
+  top: 2.083vw;
+  right: 2.083vw;
+  width: 4.861vw;
+  height: 4.861vw;
+  background-color: aqua;
+}
+.moon::before{
+  top: 0.694vw;
+  right: 0.347vw;
+  width: 1.736vw;
+  height: 1.736vw;
+  background-color: silver;
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+  /*Earth rotation End*/
+
 }
 
 
@@ -343,8 +418,11 @@ body {
     margin: 30px 0;
     border-bottom: 2px solid #FFF;
   }
+  /*Login Section End*/
 
 
+
+  /*Earth rotation Start*/
   .rotationAnimation{
     margin: 0;
     height: 600px;
@@ -415,6 +493,59 @@ body {
     transform: rotate(360deg);
   }
 }
+  /*Earth rotation Start*/
 
 
+/*tick mark section Start*/
+.tickMarkContainer{
+  display: grid;
+  place-items: center;
+  width: 100%;
+  background-color: #FFF;
+}
+.tick{
+  width: 90%;
+  max-width: 256px;
+  aspect-ratio: 1 / 1;
+}
+@keyframes svg-path{
+  0%{
+    stroke-dasharray: 0 400;
+    stroke-width: 50;
+  }
+  to{
+    stroke-dasharray: 400 0;
+    stroke-width: 20;
+  }
+}
+@keyframes svg-circle{
+  0%{
+    stroke-dasharray: 0 2023;
+    stroke-width: 50;
+  }
+  to{
+    stroke-dasharray: 2023 0;
+    stroke-width: 20;
+  }
+}
+.svg{
+  fill: none;
+  stroke: #198754;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 20;
+  transform-origin: 50% 50%;
+}
+.circle{
+  stroke-dasharray: 2023;
+  stroke-dashoffset: 2023;
+  transform: rotate(-90deg);
+  animation: 1s ease-in-out 0.5s 1 normal forwards running svg-circle;
+}
+.path{
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: 0.5s ease-in-out 1s 1 normal forwards running svg-path;
+}
+/*tick mark section End*/
 }
